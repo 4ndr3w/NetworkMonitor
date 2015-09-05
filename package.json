@@ -1,0 +1,9 @@
+{
+  "name": "UbuntoUptime",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "^1.4.2",
+    "net-ping": "^1.1.11",
+    "request": "^2.61.0"
+  }
+}
