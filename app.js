@@ -35,9 +35,6 @@ async.eachSeries(config.services, function(service, next)
 {
     if ( service.type == "ping" ) {
         ping.pingHost(service.host, function (pingError, target) {
-            if ( currentState[service.name] == undefined )
-                currentState[service.name] = (pingError?false:true);
-
             if (pingError && currentState[service.name]) {
                 sendMsg(service.name + " (" + service.host + ") is now offline - " + pingError, "red");
                 currentState[service.name] = false;
